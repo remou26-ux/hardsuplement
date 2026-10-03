@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>hardsup — l'après bodyshock</title>
 
   <style>
@@ -32,83 +31,120 @@
     }
 
     main {
-      min-height: calc(100vh - 75px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
       text-align: center;
     }
 
-    .content {
-      background: white;
-      padding: 50px 40px;
-      border-radius: 14px;
-      box-shadow: 0 4px 20px rgba(0,0,0,.07);
-      max-width: 600px;
-      width: 90%;
-    }
-
     h1 {
+      margin-bottom: 40px;
       font-size: 32px;
-      margin: 0 0 30px;
       font-weight: 600;
     }
 
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
     .link {
+      display: block;
+      padding: 25px 15px;
+      background: white;
+      border-radius: 12px;
       color: #28613a;
-      font-size: 18px;
       text-decoration: underline;
       cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,.07);
+      transition: transform .15s;
     }
 
     .link:hover {
-      opacity: 0.7;
+      transform: scale(1.03);
     }
 
-    #loading {
-      display: none;
-      margin-top: 20px;
-      color: #777;
-      font-size: 14px;
+    @media (max-width: 700px) {
+      .buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">hardsup</div>
-  </header>
+<header>
+  <div class="logo">hardsup</div>
+</header>
 
-  <main>
-    <div class="content">
+<main>
 
-      <h1>l'après bodyshock</h1>
+  <h1>l'après bodyshock</h1>
 
-      <a class="link" onclick="redirect()">
-        cliquez ici pour accéder
-      </a>
+  <div class="buttons">
 
-      <div id="loading">
-        Chargement...
-      </div>
+    <a class="link" onclick="redirect(0)">cliquez ici pour accéder</a>
+    <a class="link" onclick="redirect(1)">cliquez ici pour accéder</a>
+    <a class="link" onclick="redirect(2)">cliquez ici pour accéder</a>
 
-    </div>
-  </main>
+    <a class="link" onclick="redirect(3)">cliquez ici pour accéder</a>
+    <a class="link" onclick="redirect(4)">cliquez ici pour accéder</a>
+    <a class="link" onclick="redirect(5)">cliquez ici pour accéder</a>
 
-  <script>
-    function redirect() {
+    <a class="link" onclick="redirect(6)">cliquez ici pour accéder</a>
+    <a class="link" onclick="redirect(7)">cliquez ici pour accéder</a>
+    <a class="link" onclick="redirect(8)">cliquez ici pour accéder</a>
 
-      document.querySelector(".link").style.display = "none";
-      document.getElementById("loading").style.display = "block";
+    <a class="link" onclick="redirect(9)">cliquez ici pour accéder</a>
+    <a class="link" onclick="redirect(10)">cliquez ici pour accéder</a>
+    <a class="link" onclick="redirect(11)">cliquez ici pour accéder</a>
 
-      setTimeout(function() {
+    <a class="link" onclick="redirect(12)">cliquez ici pour accéder</a>
+    <a class="link" onclick="redirect(13)">cliquez ici pour accéder</a>
+    <a class="link" onclick="redirect(14)">cliquez ici pour accéder</a>
 
-        window.location.href = "https://piggiesgetfed.com/gay-scat-shorts-25/";
+  </div>
 
-      }, 500);
-    }
-  </script>
+</main>
+
+<script>
+
+  // ==========================================
+  // TES 15 LIENS
+  // ==========================================
+
+  const liens = [
+
+    "https://www.facebook.com/humour.a.la.crunch.officiel/videos/championnat-du-monde-du-plus-gros-excrément-championnat-monde/843062504817886/",
+    "https://boutique-beauf.fr/produit/masque-beauf-tete-de-bite/",
+    "https://www.fregis.com/infos-sante/prolapsus-de-luterus-chez-chienne/",
+    "https://ici.radio-canada.ca/nouvelle/689955/adoption-enfant-afroamericain",
+    "https://upload.wikimedia.org/wikipedia/commons/b/b8/Marlène_Schiappa.png?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=original",
+
+    "https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fhomunculus-v0-o5oemq1wzrja1.jpg%3Fauto%3Dwebp%26s%3D57ec1bdadec7a96774cdb15c1b322c8bfd27b4da",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYdIw8andL1MU-Zl4a5g1L6V9P462TPgHoUF4d12TKuw&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkVt3PwnAEwDKBWH1rYlrj3UTbVMMviMsIGwX5kQcxnr4S-_2oLNXAnro&s=10",
+    "https://i.pinimg.com/736x/a2/2d/e8/a22de8758f19d16c4461572608259ca7.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6ZD5f01MhcfSVnfpzRToYFZ7zVxvo4-7-pClnJ9-jLQ&s=10",
+
+    "https://c8.alamy.com/compfr/ewy5k7/vieux-hippies-barbus-glastonbury-festival-uk-ewy5k7.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp-xdGY3EddsWFa7scZCe5TRs0mzsNaaSoJw1auYkLGA&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2I_MAA8XODM5XQylldaLk31O59xAfDZ5aMer7ZisZcbSBERk2R8IvdoY&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIb8eeIXjVDTkgUn_6AtNBv-Pa6K06-BW0MapJBhI17g&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTI21ft7qRHR8k8BmgArHWcNq4vIuiEHMxxhWHNDge0w&s=10"
+
+  ];
+
+
+  function redirect(numero) {
+
+    window.location.href = liens[numero];
+
+  }
+
+</script>
 
 </body>
 </html>
